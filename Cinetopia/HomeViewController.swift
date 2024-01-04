@@ -30,9 +30,20 @@ class HomeViewController: UIViewController {
         label.text = "O lugar ideal para buscar, salvar e organizar seus filmes favoritos!"
         label.textColor = .white
         label.font = .systemFont(ofSize: 20, weight: .bold)
+        label.textAlignment = .center
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    }()
+    
+    private lazy var startButton: UIButton = {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("Quero começar!", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        button.layer.cornerRadius = 32
+        button.backgroundColor = .buttonBackground
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
 
     // MARK: - Functions
@@ -48,6 +59,7 @@ class HomeViewController: UIViewController {
         view.addSubview(logoImage)
         view.addSubview(coupleImage)
         view.addSubview(titleText)
+        view.addSubview(startButton)
     }
     
     private func setConstrains() {
@@ -66,7 +78,12 @@ class HomeViewController: UIViewController {
             titleText.topAnchor.constraint(equalTo: coupleImage.bottomAnchor, constant: 24),
             titleText.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             titleText.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            titleText.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
+            titleText.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            // Start Button
+            startButton.heightAnchor.constraint(equalToConstant: 68),
+            startButton.widthAnchor.constraint(equalToConstant: 228),
+            startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            startButton.topAnchor.constraint(equalTo: titleText.bottomAnchor, constant: 24)
         ])
     }
 }
