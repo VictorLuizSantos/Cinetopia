@@ -44,6 +44,7 @@ class HomeViewController: UIViewController {
         button.layer.cornerRadius = 32
         button.backgroundColor = .buttonBackground
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(navSecondScreen), for: .primaryActionTriggered)
         return button
     }()
 
@@ -54,6 +55,10 @@ class HomeViewController: UIViewController {
         view.backgroundColor = .accent
         addViews()
         setConstrains()
+    }
+    
+    @objc func navSecondScreen() {
+        navigationController?.pushViewController(MoviesViewController(), animated: true)
     }
     
     private func addViews() {
@@ -68,7 +73,7 @@ class HomeViewController: UIViewController {
             // Logo Cinetopia
             logoImage.heightAnchor.constraint(equalToConstant: 102),
             logoImage.widthAnchor.constraint(equalToConstant: 172),
-            logoImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 64),
+            logoImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32),
             logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             // Couple Image
             coupleImage.heightAnchor.constraint(equalToConstant: 289),
