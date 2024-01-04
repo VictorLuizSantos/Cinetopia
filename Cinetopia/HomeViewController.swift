@@ -40,6 +40,7 @@ class HomeViewController: UIViewController {
         let button = UIButton(type: .roundedRect)
         button.setTitle("Quero começar!", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        button.setTitleColor(.accent, for: .normal)
         button.layer.cornerRadius = 32
         button.backgroundColor = .buttonBackground
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -67,7 +68,7 @@ class HomeViewController: UIViewController {
             // Logo Cinetopia
             logoImage.heightAnchor.constraint(equalToConstant: 102),
             logoImage.widthAnchor.constraint(equalToConstant: 172),
-            logoImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 79),
+            logoImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 64),
             logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             // Couple Image
             coupleImage.heightAnchor.constraint(equalToConstant: 289),
