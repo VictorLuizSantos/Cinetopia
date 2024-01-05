@@ -61,6 +61,14 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         return movies.count
     }
     
+    // Como criar TableView -> Primeiro assina os protocolos Delegate e Datasource
+        // Coloca no numRows numero de linha conforme array.count
+        // Criar o componente tableView no viewcode, registrando ela:
+            // tableView.register(TableViewCell.self --> para saber o tipo de celula da tabela)
+            // junto com o nome da celula "xxxCell"
+        // Coloca no cellForRowAt a celula e de qual tableView ela vai vir:
+            // let cell = tableView.dequeue "xxxCell" e ajusta o texto e cor
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath)
         cell.textLabel?.text = movies[indexPath.row]
