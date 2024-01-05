@@ -7,18 +7,7 @@
 
 import UIKit
 
-class MoviesViewController: UIViewController, UITabBarDelegate, UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = moviesTableView.dequeueReusableCell(withIdentifier: "moviesCell")
-        cell?.textLabel?.text = movies[indexPath.row]
-        return cell!
-    }
-    
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let movies = ["Ace Ventura", "Batman", "Cruella", "Minions"]
     
@@ -26,8 +15,10 @@ class MoviesViewController: UIViewController, UITabBarDelegate, UITableViewDataS
     
     private lazy var moviesTableView: UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = .red
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "moviesCell")
+        tableView.backgroundColor = .clear
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "movieCell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -36,11 +27,9 @@ class MoviesViewController: UIViewController, UITabBarDelegate, UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        moviesTableView.dataSource = self
-        moviesTableView.delegate = self
-        setNavigationBar()
         addviews()
         setContrains()
+        setNavigationBar()
     }
     
     // MARK: - Methods
@@ -59,15 +48,24 @@ class MoviesViewController: UIViewController, UITabBarDelegate, UITableViewDataS
     }
     
     private func setNavigationBar() {
-//        navigationController?.navigationBar.isHidden = false
         title = "Filmes favoritos"
-//        navigationItem.title = "Filmes favoritos"
         view.backgroundColor = .accent
+        navigationItem.setHidesBackButton(true, animated: true)
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor : UIColor.white
         ]
-        navigationItem.setHidesBackButton(true, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return movies.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath)
+        cell.textLabel?.text = movies[indexPath.row]
+        cell.backgroundColor = .clear
+        return cell
     }
 }
 
