@@ -12,6 +12,7 @@ class MoviesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .accent
+        navigationController?.isNavigationBarHidden = false
         setNavigationBar()
     }
     

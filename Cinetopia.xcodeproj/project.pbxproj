@@ -58,8 +58,8 @@
 			children = (
 				8D06B4FF2B450931001FE48D /* AppDelegate.swift */,
 				8D06B5012B450931001FE48D /* SceneDelegate.swift */,
-				8D6268C62B47702D0004AE60 /* MoviesViewController.swift */,
 				8D06B5032B450931001FE48D /* HomeViewController.swift */,
+				8D6268C62B47702D0004AE60 /* MoviesViewController.swift */,
 				8D06B5082B450931001FE48D /* Assets.xcassets */,
 				8D06B50A2B450931001FE48D /* LaunchScreen.storyboard */,
 				8D06B50D2B450931001FE48D /* Info.plist */,
