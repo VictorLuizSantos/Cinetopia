@@ -59,15 +59,17 @@ class HomeViewController: UIViewController {
         return stack
     }()
 
-    // MARK: - Functions
+    // MARK: - View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .accent
-        navigationController?.isNavigationBarHidden = true
+//        navigationController?.isNavigationBarHidden = true
         addViews()
         setConstrains()
     }
+    
+    // MARK: - Methods
     
     @objc func navSecondScreen() {
         navigationController?.pushViewController(MoviesViewController(), animated: true)
@@ -106,4 +108,8 @@ class HomeViewController: UIViewController {
 //            startButton.topAnchor.constraint(equalTo: titleText.bottomAnchor, constant: 24)
         ])
     }
+}
+
+#Preview {
+    HomeViewController()
 }
