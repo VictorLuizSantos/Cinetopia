@@ -16,7 +16,7 @@ class MoviesViewController: UIViewController {
         tableView.backgroundColor = .clear
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "movieCell")
+        tableView.register(MovieTableViewCell.self, forCellReuseIdentifier: "movieCell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()

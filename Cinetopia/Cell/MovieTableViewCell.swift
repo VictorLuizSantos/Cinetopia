@@ -12,8 +12,9 @@ class MovieTableViewCell: UITableViewCell {
     // MARK: - Cell Components
     
     private lazy var moviePoster: UIImageView = {
-        let imageView = UIImageView(image: UIImage.avatar)
-        imageView.contentMode = .scaleAspectFit
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.masksToBounds = true
         imageView.layer.cornerRadius = 12.0
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -21,8 +22,8 @@ class MovieTableViewCell: UITableViewCell {
     
     private lazy var movieTitle: UILabel = {
         let label = UILabel()
-        label.text = "Avatar"
         label.font = .systemFont(ofSize: 20, weight: .bold)
+        label.numberOfLines = 0
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -30,7 +31,6 @@ class MovieTableViewCell: UITableViewCell {
     
     private lazy var movieReleaseDate: UILabel = {
         let label = UILabel()
-        label.text = "Lançamenor 18/12/2009"
         label.font = .systemFont(ofSize: 18)
         label.textColor = .white.withAlphaComponent(0.75)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -52,12 +52,19 @@ class MovieTableViewCell: UITableViewCell {
             moviePoster.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
             moviePoster.widthAnchor.constraint(equalToConstant: 100),
             
-            movieTitle.centerYAnchor.constraint(equalTo: moviePoster.centerYAnchor),
+            movieTitle.centerYAnchor.constraint(equalTo: moviePoster.centerYAnchor, constant: -16),
             movieTitle.leadingAnchor.constraint(equalTo: moviePoster.trailingAnchor, constant: 16),
+            movieTitle.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             
             movieReleaseDate.topAnchor.constraint(equalTo: movieTitle.bottomAnchor, constant: 8),
             movieReleaseDate.leadingAnchor.constraint(equalTo: moviePoster.trailingAnchor, constant: 16)
         ])
+    }
+    
+    func cellConfiguration (movie: Movie) {
+        moviePoster.image = UIImage(named: movie.image)
+        movieTitle.text = movie.title
+        movieReleaseDate.text = "Lançamento: \(movie.releaseDate)"
     }
     
     // MARK: - Class Methods
