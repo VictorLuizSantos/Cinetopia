@@ -39,17 +39,6 @@ class MovieTableViewCell: UITableViewCell {
     
     // MARK: - Cell Methods
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubviews()
-        setConstrains()
-        backgroundColor = .accent
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     private func addSubviews() {
         addSubview(moviePoster)
         addSubview(movieTitle)
@@ -72,6 +61,17 @@ class MovieTableViewCell: UITableViewCell {
     }
     
     // MARK: - Class Methods
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        addSubviews()
+        setConstrains()
+        backgroundColor = .accent
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
     
     override class func awakeFromNib() {
         super.awakeFromNib()

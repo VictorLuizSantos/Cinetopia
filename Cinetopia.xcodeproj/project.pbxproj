@@ -64,7 +64,7 @@
 			children = (
 				8D06B4FF2B450931001FE48D /* AppDelegate.swift */,
 				8D06B5012B450931001FE48D /* SceneDelegate.swift */,
-				8D30779F2B4A33FE00D72D5A /* MovieTableViewCell.swift */,
+				8D3077A12B4A49CB00D72D5A /* Cell */,
 				8D6400112B488CBA006FF983 /* Models */,
 				8D6400132B488CDE006FF983 /* Views */,
 				8D6400122B488CC5006FF983 /* Extensions */,
@@ -73,6 +73,14 @@
 				8D06B50D2B450931001FE48D /* Info.plist */,
 			);
 			path = Cinetopia;
+			sourceTree = "<group>";
+		};
+		8D3077A12B4A49CB00D72D5A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8D30779F2B4A33FE00D72D5A /* MovieTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		8D6400112B488CBA006FF983 /* Models */ = {
