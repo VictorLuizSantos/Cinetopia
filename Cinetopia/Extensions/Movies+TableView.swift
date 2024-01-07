@@ -30,10 +30,8 @@ extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
             cell.backgroundColor = .clear
             return cell
         }
-        else {
-            print("Error customizating table view cell")
-            return UITableViewCell()
-        }
+        print("Error customizing table view cell")
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
