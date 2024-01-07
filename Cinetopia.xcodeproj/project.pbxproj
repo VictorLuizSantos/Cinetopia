@@ -16,6 +16,7 @@
 		8D6268C72B47702D0004AE60 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6268C62B47702D0004AE60 /* MoviesViewController.swift */; };
 		8D64000E2B488C44006FF983 /* Movies+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D64000D2B488C44006FF983 /* Movies+TableView.swift */; };
 		8D6400102B488C90006FF983 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D64000F2B488C90006FF983 /* Movie.swift */; };
+		8DC50EC32B4B5B36000429ED /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC50EC22B4B5B36000429ED /* MovieDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8D6268C62B47702D0004AE60 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		8D64000D2B488C44006FF983 /* Movies+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movies+TableView.swift"; sourceTree = "<group>"; };
 		8D64000F2B488C90006FF983 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		8DC50EC22B4B5B36000429ED /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				8D06B5032B450931001FE48D /* HomeViewController.swift */,
 				8D6268C62B47702D0004AE60 /* MoviesViewController.swift */,
+				8DC50EC22B4B5B36000429ED /* MovieDetailsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC50EC32B4B5B36000429ED /* MovieDetailsViewController.swift in Sources */,
 				8D06B5042B450931001FE48D /* HomeViewController.swift in Sources */,
 				8D64000E2B488C44006FF983 /* Movies+TableView.swift in Sources */,
 				8D3077A02B4A33FE00D72D5A /* MovieTableViewCell.swift in Sources */,

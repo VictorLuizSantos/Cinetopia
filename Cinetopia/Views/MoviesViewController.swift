@@ -46,16 +46,12 @@ class MoviesViewController: UIViewController {
     }
     
     private func setNavigationBar() {
-        title = "Filmes favoritos"
+        title = "Filmes populares"
         view.backgroundColor = .accent
-        navigationItem.setHidesBackButton(true, animated: true)
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.titleTextAttributes = [
+        navigationController?.navigationBar.largeTitleTextAttributes = [
             NSAttributedString.Key.foregroundColor : UIColor.white
         ]
+        navigationItem.setHidesBackButton(true, animated: true)
     }
-}
-
-#Preview {
-    MoviesViewController()
 }

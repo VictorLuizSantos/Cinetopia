@@ -28,6 +28,7 @@ extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieTableViewCell {
             cell.cellConfiguration(movie: movies[indexPath.row])
             cell.backgroundColor = .clear
+//            cell.selectionStyle = .none // Não poder ter o efeito de clicar na célula
             return cell
         }
         print("Error customizing table view cell")
@@ -36,6 +37,7 @@ extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true) // AQUI JÁ É O PROTOCOLO UITABLEVIEW DELEGATE
+        navigationController?.pushViewController(MovieDetailsViewController(movie: movies[indexPath.row]), animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
