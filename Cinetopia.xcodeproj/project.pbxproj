@@ -12,6 +12,7 @@
 		8D06B5042B450931001FE48D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D06B5032B450931001FE48D /* HomeViewController.swift */; };
 		8D06B5092B450931001FE48D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D06B5082B450931001FE48D /* Assets.xcassets */; };
 		8D06B50C2B450931001FE48D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D06B50A2B450931001FE48D /* LaunchScreen.storyboard */; };
+		8D3077A02B4A33FE00D72D5A /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D30779F2B4A33FE00D72D5A /* MovieTableViewCell.swift */; };
 		8D6268C72B47702D0004AE60 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6268C62B47702D0004AE60 /* MoviesViewController.swift */; };
 		8D64000E2B488C44006FF983 /* Movies+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D64000D2B488C44006FF983 /* Movies+TableView.swift */; };
 		8D6400102B488C90006FF983 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D64000F2B488C90006FF983 /* Movie.swift */; };
@@ -25,6 +26,7 @@
 		8D06B5082B450931001FE48D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D06B50B2B450931001FE48D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D06B50D2B450931001FE48D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D30779F2B4A33FE00D72D5A /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		8D6268C62B47702D0004AE60 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		8D64000D2B488C44006FF983 /* Movies+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movies+TableView.swift"; sourceTree = "<group>"; };
 		8D64000F2B488C90006FF983 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				8D06B4FF2B450931001FE48D /* AppDelegate.swift */,
 				8D06B5012B450931001FE48D /* SceneDelegate.swift */,
+				8D30779F2B4A33FE00D72D5A /* MovieTableViewCell.swift */,
 				8D6400112B488CBA006FF983 /* Models */,
 				8D6400132B488CDE006FF983 /* Views */,
 				8D6400122B488CC5006FF983 /* Extensions */,
@@ -169,6 +172,7 @@
 			files = (
 				8D06B5042B450931001FE48D /* HomeViewController.swift in Sources */,
 				8D64000E2B488C44006FF983 /* Movies+TableView.swift in Sources */,
+				8D3077A02B4A33FE00D72D5A /* MovieTableViewCell.swift in Sources */,
 				8D6400102B488C90006FF983 /* Movie.swift in Sources */,
 				8D06B5002B450931001FE48D /* AppDelegate.swift in Sources */,
 				8D06B5022B450931001FE48D /* SceneDelegate.swift in Sources */,

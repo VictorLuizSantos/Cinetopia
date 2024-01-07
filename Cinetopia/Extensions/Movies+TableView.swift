@@ -30,7 +30,7 @@ extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
         // Novo jeito de configurar atributos da celula
         
         var config = cell.defaultContentConfiguration()
-        config.text = movies[indexPath.row]
+        config.text = movies[indexPath.row].title
         config.textProperties.color = .white
         cell.contentConfiguration = config
         

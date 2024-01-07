@@ -9,8 +9,6 @@ import UIKit
 
 class MoviesViewController: UIViewController {
     
-    let movies = ["Ace Ventura", "Batman", "Cruella", "Minions"]
-    
     // MARK: - UI Components
     
     private lazy var moviesTableView: UITableView = {
@@ -56,4 +54,8 @@ class MoviesViewController: UIViewController {
             NSAttributedString.Key.foregroundColor : UIColor.white
         ]
     }
+}
+
+#Preview {
+    MoviesViewController()
 }
