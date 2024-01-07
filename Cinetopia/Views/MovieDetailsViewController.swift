@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieDetailsViewController: UITableViewController {
+final class MovieDetailsViewController: UITableViewController {
     
     // MARK: - Atributs
     
@@ -74,7 +74,7 @@ class MovieDetailsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .accent
-//        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        navigationController?.navigationBar.tintColor = .white
         addSubviews()
         setConstrains()
     }
